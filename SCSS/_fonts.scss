@@ -1,0 +1,100 @@
+@font-face {
+    font-family: 'Space Grotesk';
+    src: local('Space Grotesk Bold'), local('SpaceGrotesk-Bold'),
+        url('../fonts/SpaceGrotesk-Bold.woff2') format('woff2'),
+        url('../fonts/SpaceGrotesk-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Work Sans';
+    src: local('Work Sans Light'), local('WorkSans-Light'),
+        url('../fonts/WorkSans-Light.woff2') format('woff2'),
+        url('../fonts/WorkSans-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Work Sans';
+    src: local('Work Sans SemiBold'), local('WorkSans-SemiBold'),
+        url('../fonts/WorkSans-SemiBold.woff2') format('woff2'),
+        url('../fonts/WorkSans-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Work Sans';
+    src: local('Work Sans Bold'), local('WorkSans-Bold'),
+        url('../fonts/WorkSans-Bold.woff2') format('woff2'),
+        url('../fonts/WorkSans-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    src: local('Gilroy-Bold'),
+        url('../fonts/Gilroy-Bold.woff2') format('woff2'),
+        url('../fonts/Gilroy-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Lexend';
+    src: local('Lexend Light'), local('Lexend-Light'),
+        url('../fonts/Lexend-Light.woff2') format('woff2'),
+        url('../fonts/Lexend-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    src: local('Gilroy-Regular'),
+        url('../fonts/Gilroy-Regular.woff2') format('woff2'),
+        url('../fonts/Gilroy-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    src: local('Gilroy-SemiBold'),
+        url('../fonts/Gilroy-SemiBold.woff2') format('woff2'),
+        url('../fonts/Gilroy-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Work Sans';
+    src: local('Work Sans Regular'), local('WorkSans-Regular'),
+        url('../fonts/WorkSans-Regular.woff2') format('woff2'),
+        url('../fonts/WorkSans-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    src: local('Gilroy-SemiBoldItalic'),
+        url('../fonts/Gilroy-SemiBoldItalic.woff2') format('woff2'),
+        url('../fonts/Gilroy-SemiBoldItalic.woff') format('woff');
+    font-weight: 600;
+    font-style: italic;
+    font-display: swap;
+}
+
