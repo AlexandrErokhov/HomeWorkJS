@@ -3,6 +3,10 @@
   font-family: 'Gilroy', 'Arial', sans-serif;
 }
 
+.body--opened-menu {
+  overflow: hidden;
+}
+
 .body--opened-modal {
   overflow: hidden;
 }
@@ -32,6 +36,7 @@
   font-weight: 600;
   line-height: normal;
   padding: 12px 14px 13px 14px;
+  max-width: 165px;
 }
 
 .hr {
@@ -44,7 +49,7 @@
   position: fixed;
   inset: 0;
   background: #272727e6;
-  z-index: 10;
+  z-index: 12;
   padding: 15px;
 
   display: flex;
@@ -53,7 +58,12 @@
   opacity: 0;
   visibility: hidden;
   transition: all .6s;
+
+  &__button{
+    max-width: none;
+  }
 }
+
 .main {
   flex-grow: 1;
 }
@@ -118,13 +128,6 @@
   gap: 20px;
 }
 
-.modal__form-label {
-  
-}
-
-.field {}
-
-
 .field__input {
   color: #000;
   font-size: 16px;
@@ -145,4 +148,34 @@
 
 .modal__button {
   padding: 16px 86px 17px 86px;
+}
+
+.swiper-pagination-bullet {
+  background-color: $grey-text-color;
+  width: 13px;
+  height: 13px;
+
+  &-active {
+    background-color: $yellow-color;
+  }
+}
+
+// ==============================================================================================================
+.video-js .vjs-big-play-button {
+  background: $yellow-color;
+  border-radius: 50%;
+  width: 52px;
+  height: 52px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: $black-bg-color;
+}
+
+.video-js .vjs-big-play-button .vjs-icon-placeholder:before,
+.video-js .vjs-modal-dialog,
+.vjs-button>.vjs-icon-placeholder:before,
+.vjs-modal-dialog .vjs-modal-dialog-content{
+  top: 8%;
+  left: 1%;
 }

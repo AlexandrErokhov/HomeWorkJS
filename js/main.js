@@ -1,8 +1,60 @@
 (function () {
+  // =========================================================Бургер
+  const burgerIcon = document.querySelector('.burger-icon')
+  const body = document.body
+  const bodyOpenedMenu = document.querySelector('.body--opened-menu')
+
+  const openMenu = () => {
+    body.classList.add('body--opened-menu')
+    // burgerIcon.classList.remove('burger-icon--opened')
+  }
+  const closeMenu = () => {
+    body.classList.remove('body--opened-menu')
+    // burgerIcon.classList.add('burger-icon--opened')
+  }
+
+  burgerIcon.addEventListener('click', openMenu)
+
+  body.addEventListener('click', event => {
+    const target = event.target
+    if (target && event.target.classList.contains('body') || target.classList.contains('burger-icon') || target.classList.contains('nav__menu-link')) {
+      closeMenu()
+    }
+  })
+
+  // =========================================================Аккордеон-бургер
+  const burgaccordionList = document.querySelector('.nav__list');
+
+  burgaccordionList.addEventListener('click', (event) => {
+
+    const burgaccordionList = event.currentTarget
+    const burgaccordionOpenedItem = burgaccordionList.querySelector('.nav__item--opened')
+    const burgaccordionOpenedContent = burgaccordionList.querySelector('.nav__item--opened .nav__menu-list')
+
+    const burgaccordionControl = event.target.closest('.nav__link');
+    if (!burgaccordionControl) return
+    event.preventDefault()
+    const burgaccordionItem = burgaccordionControl.parentElement;
+    const burgaccordionContent = burgaccordionControl.nextElementSibling;
+
+    if (burgaccordionOpenedItem && burgaccordionItem != burgaccordionOpenedItem) {
+      burgaccordionOpenedItem.classList.remove('nav__item--opened');
+      burgaccordionOpenedContent.style.maxHeight = null;
+    }
+
+    burgaccordionItem.classList.toggle('nav__item--opened');
+
+    if (burgaccordionItem.classList.contains('nav__item--opened')) {
+      burgaccordionContent.style.maxHeight = burgaccordionContent.scrollHeight + 'px';
+    } else {
+      burgaccordionContent.style.maxHeight = null;
+    }
+
+  });
+  // =========================================================Модалка
   const btnOpen1 = document.querySelector('.header__button')
   const btnOpen2 = document.querySelector('.hero__button')
   const btnOpen3 = document.querySelector('.footer__button')
-  const body = document.body
   const modal = document.querySelector('.modal')
 
   const openModal = () => {
@@ -28,7 +80,7 @@
       closeModal()
     }
   })
-  // =========================================================Модалка
+  // =========================================================Хиро слайдер
 
   new Swiper('.hero__slider', {
     slidesPerView: 1,
@@ -68,30 +120,83 @@
     tabContent.classList.add('projects__slider--show')
   })
 
-  tabControls.addEventListener('click', togleTab)
+  // =========================================================Видео-плеер
+  videojs(document.querySelector('.video-js'))
+
   // =========================================================Проект-слайдер
+  tabControls.addEventListener('click', togleTab)
 
   new Swiper('.projects__slider', {
 
-    spaceBetween: 30,
-    slidesPerView: 4,
+    spaceBetween: 15,
+    slidesPerView: 2,
 
     pagination: {
       el: '.projects__pagination',
       clickable: true,
     },
+
+    breakpoints: {
+      801: {
+        slidesPerView: 4,
+      },
+      1501: {
+        spaceBetween: 30,
+        slidesPerView: 4,
+      },
+    },
+
   });
   // =========================================================Слайдер отзывов
   new Swiper('.testimonials__slider', {
 
-    spaceBetween: 0,
-    slidesPerView: 1.51,
+    spaceBetween: 62,
+    slidesPerView: 1,
     centeredSlides: true,
 
     pagination: {
       el: '.testimonials__pagination',
       clickable: true,
     },
+
+    breakpoints: {
+      801: {
+        spaceBetween: 0,
+      },
+      1501: {
+        spaceBetween:0,
+        slidesPerView: 1.53,
+      },
+    }
+  });
+  // =========================================================Аккордеон-футер
+  const footaccordionList = document.querySelector('.footer__nav');
+
+
+  footaccordionList.addEventListener('click', (event) => {
+
+    const footaccordionList = event.currentTarget
+    const footaccordionOpenedItem = footaccordionList.querySelector('.footer__nav-list--opened')
+    const footaccordionOpenedContent = footaccordionList.querySelector('.footer__nav-list--opened .footer__nav-content')
+
+    const footaccordionControl = event.target.closest('.footer__nav-control');
+    if (!footaccordionControl) return
+    event.preventDefault()
+    const footaccordionItem = footaccordionControl.parentElement;
+    const footaccordionContent = footaccordionControl.nextElementSibling;
+
+    if (footaccordionOpenedItem && footaccordionItem != footaccordionOpenedItem) {
+      footaccordionOpenedItem.classList.remove('footer__nav-list--opened');
+      footaccordionOpenedContent.style.maxHeight = null;
+    }
+    footaccordionItem.classList.toggle('footer__nav-list--opened');
+
+    if (footaccordionItem.classList.contains('footer__nav-list--opened')) {
+      footaccordionContent.style.maxHeight = footaccordionContent.scrollHeight + 'px';
+    } else {
+      footaccordionContent.style.maxHeight = null;
+    }
+
   });
   // =========================================================Аккордеон
   const accordionList = document.querySelector('.accordion-list');
