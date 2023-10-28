@@ -2109,7 +2109,7 @@ address {
     position: fixed;
     inset: 0;
     z-index: 10;
-    padding: 26vh 15px 30px;
+    padding: 20vh 15px 30px;
     background: #272727;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -2151,6 +2151,16 @@ address {
     font-style: normal;
     font-weight: 600;
     line-height: normal;
+  }
+  .nav__menu-list {
+    position: static;
+    top: 0;
+    max-height: 0;
+    overflow: hidden;
+    visibility: visible;
+    opacity: 1;
+    -webkit-transition: all 0.4s;
+    transition: all 0.4s;
   }
   .user__nav {
     padding-top: 40px;

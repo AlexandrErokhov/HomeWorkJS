@@ -6,11 +6,9 @@
 
   const openMenu = () => {
     body.classList.add('body--opened-menu')
-    // burgerIcon.classList.remove('burger-icon--opened')
   }
   const closeMenu = () => {
     body.classList.remove('body--opened-menu')
-    // burgerIcon.classList.add('burger-icon--opened')
   }
 
   burgerIcon.addEventListener('click', openMenu)
